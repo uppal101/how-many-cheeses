@@ -1,13 +1,13 @@
 import React, {Component} from "react"
 
-class Login extends Component {
+class LoginTitle extends Component {
   render() {
     return (
       <h2>
-        Log-in
+        Too-Cheesy
       </h2>
     );
   }
 }
 
-export default Login
+export default LoginTitle
