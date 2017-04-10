@@ -5,6 +5,7 @@ import Places from './components/PlacesComponent/Places'
 import SideNav from './components/SideNav/SideNav'
 import NavBar from './components/Common/Navigation/NavBar'
 import SearchButton from './components/Common/Button'
+import SearchBar from './components/Common/SearchBar'
 
 class App extends Component {
     render() {
@@ -23,6 +24,7 @@ class App extends Component {
                     background: 'red'
                 }}>
                     <SideNav/>
+                    <SearchBar/>
                     <Map center={location}/>
                     <SearchButton/>
                 </div>
