@@ -8,12 +8,12 @@ import Places from './components/PlacesComponent/Places'
 class App extends Component {
   render() {
    const location = {
-    lat: 37.774,
-    lng: -122.431297
+    lat: 40.7575285,
+    lng: -73.9884469
    }
     return (
       <div > <h1>This is a react app</h1>
-        <div style={{width:500, height:500, background:'red'}}>
+        <div style={{width:700, height:700, background:'red'}}>
           <Map center={location} />
         </div>
 
