@@ -16,18 +16,18 @@ import StoreTable from './components/StoreTable/Table'
 
 class App extends Component {
     render() {
-        const location = {
-            lat: 37.7749,
-            lng: -122.4194
-        }
-        const markers = [
-            {
-                location: {
-                    lat: 37.7749,
-                    lng: -122.4194
-                }
-            }
-        ]
+        // const location = {
+        //     lat: 37.7749,
+        //     lng: -122.4194
+        // }
+        // const markers = [
+        //     {
+        //         location: {
+        //             lat: 37.7749,
+        //             lng: -122.4194
+        //         }
+        //     }
+        // ]
         return (
             <div style={{
                 width: 400,
@@ -44,7 +44,7 @@ class App extends Component {
                     <SearchBar/>
                     <ResultsTable/>
                     <StoreTable/>
-                    <Map center={location} markers={markers}/>
+                    {/* <Map center={location} markers={markers}/> */}
                     <SearchButton/>
                     <Header/>
                     <FavoritesTable/>
