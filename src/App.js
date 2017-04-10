@@ -7,6 +7,7 @@ import NavBar from './components/Common/Navigation/NavBar'
 import SearchButton from './components/Common/Button'
 import SearchBar from './components/Common/SearchBar'
 import TextArea from './components/TextArea/TextArea'
+import Header from './components/Header'
 
 class App extends Component {
     render() {
@@ -28,6 +29,7 @@ class App extends Component {
                     <SearchBar/>
                     <Map center={location}/>
                     <SearchButton/>
+                    <Header/>
                     <TextArea/>
                 </div>
             </div>
