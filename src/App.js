@@ -10,6 +10,7 @@ import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
 import LoginTitle from './components/Login/LoginTitle'
 import SignIn from './components/Login/SignIn'
+import Table from './components/favoritesTable/Table'
 
 class App extends Component {
     render() {
@@ -42,6 +43,7 @@ class App extends Component {
                     <Map center={location} markers={markers}/>
                     <SearchButton/>
                     <Header/>
+                    <Table/>
                     <TextArea/>
                     <LoginTitle/>
                     <SignIn/>
