@@ -1,7 +1,8 @@
 import React from "react"
 import {connect} from 'react-redux'
-import {setQuery} from '../action'
+import {setQuery, setCheeseResult} from '../action'
 import {bindActionCreators} from 'redux'
+import {Button} from 'react-bootstrap';
 
 const mapStateToProps = (state, ownProps) => {
  return {
@@ -10,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
- return bindActionCreators({setQuery}, dispatch)
+ return bindActionCreators({setQuery, setCheeseResult}, dispatch)
 }
 
 
@@ -24,7 +25,13 @@ class SearchBar extends React.Component {
          placeholder="Search"
          onChange={(event) => this.props.setQuery(event.target.value)}
          />
+         <Button onClick={(event) => {
+          // console.log('Inside of submit function');
+          event.preventDefault();
+          this.props.setCheeseResult(this.props.value)
+         }}>Sumbit Cheese</Button>
       </form>
+
     );
   }
 }
