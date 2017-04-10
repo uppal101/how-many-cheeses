@@ -13,26 +13,28 @@ import NavBar from './components/Common/Navigation/NavBar'
 class App extends Component {
   render() {
    const location = {
-    lat: 40.7575285,
-    lng: -73.9884469
+    lat: 37.7749,
+    lng: -122.4194
    }
-    return (
+   const markers = [
+    {
+     location: {
+      lat: 37.7749,
+      lng: -122.4194
+     }
+    }
+   ]
 
-
-        <div style={{width:400, height:400, background:'red'}}>
-
-         <div>
-
-          <NavBar/>
-         </div>
-        <div style={{width:500, height:500, background:'red'}}>
-          <SideNav/>
-          <Map center={location} />
-
-        </div>
-
-
+   return(
+     <div style={{width:400, height:400, background:'red'}}>
+      <div>
+       <NavBar/>
       </div>
+      <div style={{width:500, height:500, background:'red'}}>
+       <SideNav/>
+       <Map center={location} markers={markers} />
+      </div>
+     </div>
     );
   }
 }
