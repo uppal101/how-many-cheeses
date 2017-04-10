@@ -15,27 +15,36 @@ import Login from './components/Login/LoginTitle'
 class App extends Component {
     render() {
         const location = {
-            lat: 40.7575285,
-            lng: -73.9884469
+            lat: 37.7749,
+            lng: -122.4194
         }
+        const markers = [
+            {
+                location: {
+                    lat: 37.7749,
+                    lng: -122.4194
+                }
+            }
+        ]
         return (
-            <div>
+            <div style={{
+                width: 400,
+                height: 400
+            }}>
                 <div>
                     <NavBar/>
                 </div>
                 <div style={{
                     width: 500,
-                    height: 500,
-                    background: 'red'
+                    height: 500
                 }}>
                     <SideNav/>
                     <SearchBar/>
-                    <Map center={location}/>
+                    <Map center={location} markers={markers}/>
                     <SearchButton/>
                     <Header/>
                     <TextArea/>
-                    <Login/>
-                    {/* <Email/> */}
+                    <Login/> {/* <Email/> */}
                     {/* <Password/> */}
                 </div>
             </div>
