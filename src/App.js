@@ -10,31 +10,41 @@ import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
 
 class App extends Component {
-    render() {
-        const location = {
-            lat: 40.7575285,
-            lng: -73.9884469
-        }
-        return (
-            <div>
-                <div>
-                    <NavBar/>
-                </div>
-                <div style={{
-                    width: 500,
-                    height: 500,
-                    background: 'red'
-                }}>
-                    <SideNav/>
-                    <SearchBar/>
-                    <Map center={location}/>
-                    <SearchButton/>
-                    <Header/>
-                    <TextArea/>
-                </div>
-            </div>
-        );
+
+  render() {
+   
+   const location = {
+    lat: 37.7749,
+    lng: -122.4194
+   }
+   const markers = [
+    {
+     location: {
+      lat: 37.7749,
+      lng: -122.4194
+     }
     }
+   ]
+
+   return(
+     <div style={{width:400, height:400, background:'red'}}>
+      <div>
+       <NavBar/>
+      </div>
+      <div style={{width:500, height:500, background:'red'}}>
+       <SideNav/>
+       <Map center={location} markers={markers} />
+    
+      <SearchBar/>
+
+      <SearchButton/>
+      <Header/>
+      <TextArea/>
+      </div>
+     </div>
+    );
+  }
+
 }
 
 export default App;
