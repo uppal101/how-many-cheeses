@@ -5,7 +5,7 @@ import {ButtonGroup, DropdownButton, MenuItem, Button}  from 'react-bootstrap';
 
 const SideNav = () => {
   return (
-    <ButtonGroup vertical>
+    <ButtonGroup vertical bsSize="large">
       <SideNavCategories/>
     </ButtonGroup>
   )

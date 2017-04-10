@@ -8,6 +8,9 @@ import SearchButton from './components/Common/Button'
 import SearchBar from './components/Common/SearchBar'
 import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
+import Email from './components/Login/Email'
+import Password from './components/Login/Password'
+import Login from './components/Login/LoginTitle'
 
 class App extends Component {
     render() {
@@ -31,6 +34,9 @@ class App extends Component {
                     <SearchButton/>
                     <Header/>
                     <TextArea/>
+                    <Login/>
+                    {/* <Email/> */}
+                    {/* <Password/> */}
                 </div>
             </div>
         );
