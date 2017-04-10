@@ -8,9 +8,11 @@ import SearchButton from './components/Common/Button'
 import SearchBar from './components/Common/SearchBar'
 import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
-// import Email from './components/Login/Email'
-// import Password from './components/Login/Password'
-// import Login from './components/Login/LoginTitle'
+import LoginTitle from './components/Login/LoginTitle'
+import SignIn from './components/Login/SignIn'
+import axios from 'axios';
+import * as CONST from './constants';
+
 
 
 class App extends Component {
@@ -45,7 +47,9 @@ class App extends Component {
                     <SearchButton/>
                     <Header/>
                     <TextArea/>
-                    {/* <Login/> {/* <Email/> */} 
+                    <LoginTitle/>
+                    <SignIn/>
+                    {/* <Email/> */}
                     {/* <Password/> */}
                 </div>
             </div>
