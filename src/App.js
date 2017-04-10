@@ -12,6 +12,7 @@ import NavBar from './components/Common/Navigation/NavBar'
 
 class App extends Component {
   render() {
+   
    const location = {
     lat: 37.7749,
     lng: -122.4194
