@@ -10,7 +10,8 @@ import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
 import LoginTitle from './components/Login/LoginTitle'
 import SignIn from './components/Login/SignIn'
-import Table from './components/favoritesTable/Table'
+import FavoritesTable from './components/favoritesTable/Table'
+import ResultsTable from './components/SearchTable/Table'
 
 class App extends Component {
     render() {
@@ -40,10 +41,11 @@ class App extends Component {
                 }}>
                     <SideNav/>
                     <SearchBar/>
+                    <ResultsTable/>
                     <Map center={location} markers={markers}/>
                     <SearchButton/>
                     <Header/>
-                    <Table/>
+                    <FavoritesTable/>
                     <TextArea/>
                     <LoginTitle/>
                     <SignIn/>
