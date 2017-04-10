@@ -3,7 +3,7 @@ import './App.css';
 import Map from './components/GoogleMap/GoogleMap'
 import Places from './components/PlacesComponent/Places'
 // import SideNavSubCategories from './components/SideNav/SideNavSubCategories'
-// import SideNavCategories from './components/SideNav/SideNavCategories'
+import SideNav from './components/SideNav/SideNav'
 
 class App extends Component {
   render() {
@@ -15,6 +15,7 @@ class App extends Component {
       <div >
         <div style={{width:500, height:500, background:'red'}}>
           <Map center={location} />
+          <SideNav/>
         </div>
 
 
