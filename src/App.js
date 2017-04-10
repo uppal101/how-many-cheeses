@@ -6,8 +6,7 @@ import SideNav from './components/SideNav/SideNav'
 import NavBar from './components/Common/Navigation/NavBar'
 import SearchButton from './components/Common/Button'
 import SearchBar from './components/Common/SearchBar'
-import TextBoxTitle from './components/TextArea/TextBoxTitle'
-import TextBox from './components/TextArea/TextBox'
+import TextArea from './components/TextArea/TextArea'
 
 class App extends Component {
     render() {
@@ -29,8 +28,7 @@ class App extends Component {
                     <SearchBar/>
                     <Map center={location}/>
                     <SearchButton/>
-                    <TextBoxTitle/>
-                    <TextBox/>
+                    <TextArea/>
                 </div>
             </div>
         );
