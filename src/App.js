@@ -2,21 +2,33 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from './components/GoogleMap/GoogleMap'
 import Places from './components/PlacesComponent/Places'
+
+// import SideNavSubCategories from './components/SideNav/SideNavSubCategories'
+// import SideNav from './components/SideNav/SideNav'
+
 import SideNav from './components/SideNav/SideNav'
 import NavBar from './components/Common/Navigation/NavBar'
+
 
 class App extends Component {
   render() {
    const location = {
-    lat: 0,
-    lng: 0
+    lat: 40.7575285,
+    lng: -73.9884469
    }
     return (
-      <div >
-        <NavBar/>
+
+
+        <div style={{width:400, height:400, background:'red'}}>
+
+         <div>
+
+          <NavBar/>
+         </div>
         <div style={{width:500, height:500, background:'red'}}>
-          <Map center={location} />
           <SideNav/>
+          <Map center={location} />
+
         </div>
 
 
