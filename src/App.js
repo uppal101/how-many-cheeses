@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Map from './components/GoogleMap/GoogleMap'
+// import Map from './components/GoogleMap/GoogleMap'
 // import Places from './components/PlacesComponent/Places'
 import SideNav from './components/SideNav/SideNav'
 import NavBar from './components/Common/Navigation/NavBar'
