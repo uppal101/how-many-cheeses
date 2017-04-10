@@ -29,7 +29,7 @@ class SearchBar extends React.Component {
           // console.log('Inside of submit function');
           event.preventDefault();
           this.props.setCheeseResult(this.props.value)
-         }}>Sumbit</Button>
+         }}>Sumbit Cheese</Button>
       </form>
 
     );
