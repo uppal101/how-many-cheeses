@@ -12,7 +12,7 @@ import LoginTitle from './components/Login/LoginTitle'
 import SignIn from './components/Login/SignIn'
 import FavoritesTable from './components/favoritesTable/Table'
 import ResultsTable from './components/SearchTable/Table'
-
+import StoreTable from './components/StoreTable/Table'
 class App extends Component {
     render() {
         const location = {
@@ -42,6 +42,7 @@ class App extends Component {
                     <SideNav/>
                     <SearchBar/>
                     <ResultsTable/>
+                    <StoreTable/>
                     <Map center={location} markers={markers}/>
                     <SearchButton/>
                     <Header/>
