@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Form, FormGroup, Col, Button} from 'react-bootstrap';
+import {Form} from 'react-bootstrap';
 import Password from './Password';
 import Email from './Email';
 import RememberMe from './RememberMe';

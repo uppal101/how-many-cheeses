@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {tbody, tr, th } from 'react-bootstrap';
+import {tbody, tr, td } from 'react-bootstrap';
 
 class Tbody extends Component {
     render() {
