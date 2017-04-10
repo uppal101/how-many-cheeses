@@ -12,7 +12,7 @@ import NavBar from './components/Common/Navigation/NavBar'
 
 class App extends Component {
   render() {
-   
+
    const location = {
     lat: 37.7749,
     lng: -122.4194
@@ -31,7 +31,7 @@ class App extends Component {
       <div>
        <NavBar/>
       </div>
-      <div style={{width:500, height:500, background:'red'}}>
+      <div style={{width:500, height:500}}>
        <SideNav/>
        <Map center={location} markers={markers} />
       </div>
