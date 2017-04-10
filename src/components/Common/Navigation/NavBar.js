@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import ReactDOM from "react-dom";
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 class navBar extends Component {
