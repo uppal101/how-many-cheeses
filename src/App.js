@@ -10,10 +10,9 @@ import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
 import LoginTitle from './components/Login/LoginTitle'
 import SignIn from './components/Login/SignIn'
-import axios from 'axios';
-import * as CONST from './constants';
-
-
+import FavoritesTable from './components/favoritesTable/Table'
+import ResultsTable from './components/SearchTable/Table'
+import StoreTable from './components/StoreTable/Table'
 
 class App extends Component {
     render() {
@@ -43,9 +42,12 @@ class App extends Component {
                 }}>
                     <SideNav/>
                     <SearchBar/>
+                    <ResultsTable/>
+                    <StoreTable/>
                     <Map center={location} markers={markers}/>
                     <SearchButton/>
                     <Header/>
+                    <FavoritesTable/>
                     <TextArea/>
                     <LoginTitle/>
                     <SignIn/>
