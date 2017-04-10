@@ -13,6 +13,7 @@ const mapDispatchToProps = (dispatch) => {
  return bindActionCreators({setQuery}, dispatch)
 }
 
+
 class SearchBar extends React.Component {
   render() {
    console.log(this.props.value);
