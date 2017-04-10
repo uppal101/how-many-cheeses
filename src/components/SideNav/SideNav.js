@@ -1,5 +1,4 @@
 import React from "react"
-import ReactDOM from "react-dom"
 import SideNavCategories from './SideNavCategories'
 import {ButtonGroup, DropdownButton, MenuItem, Button} from 'react-bootstrap';
 
