@@ -8,10 +8,13 @@ export const setQuery = (text) => {
 export const setCheeseResult = (cheeseName) => {
  return {
   type: 'SET_NAV_RESULT',
-  payload: fetchCheeseByName(cheeseName)
+  payload: fetchCheese(cheeseName)
  }
 }
 
-function fetchCheeseByName(cheeseName) {
- fetch()
+function fetchCheese(cheeseName) {
+ fetch('http://cheeswhiz.herokuapp.com/api/cheese/specific/${cheeseName}')
+ .then(response => response.json())
+ .then(result => console.log(result))
+ .catch((err) => console.log('Houston we has a prolem!'))
 }
