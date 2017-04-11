@@ -13,8 +13,10 @@ export const setCheeseResult = (cheeseName) => {
 }
 
 function fetchCheese(cheeseName) {
+ const zip = 94103;
+ // fetch(`http://cheeswhiz.herokuapp.com/api/cheese/firmness/${cheeseName}`)
  fetch(`http://cheeswhiz.herokuapp.com/api/cheese/firmness/${cheeseName}`)
- .then(response => response.json())
+ .then(response => console.log(response))
  .then(result => console.log(result))
  .catch((err) => console.log('Houston we has a problem!'))
 }

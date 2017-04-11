@@ -10,6 +10,7 @@ import promiseMiddleware from 'redux-promise-middleware';
 
 const composeStoreWithMiddleware = applyMiddleware( promiseMiddleware())(createStore);
 const store = composeStoreWithMiddleware(rootReducer);
+window.__store__ = store; // TODO: remove this, just for development debugging
 
 ReactDOM.render(
  <Provider store={store}>

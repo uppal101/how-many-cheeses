@@ -4,7 +4,7 @@ import Map from './components/GoogleMap/GoogleMap'
 // import Places from './components/PlacesComponent/Places'
 import SideNav from './components/SideNav/SideNav'
 import NavBar from './components/Common/Navigation/NavBar'
-import MapButton from './components/Common/Button'
+import MapButton from './components/Common/MapSearchStore'
 import SearchBar from './components/Common/SearchBar'
 import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
@@ -13,6 +13,7 @@ import SignIn from './components/Login/SignIn'
 import FavoritesTable from './components/favoritesTable/Table'
 import ResultsTable from './components/SearchTableResults/Table'
 import StoreTable from './components/StoreTable/Table'
+import FindStoreInputForm from './components/FindStoreInputForm/FindStoreInputForm'
 
 class App extends Component {
     render() {
@@ -40,12 +41,13 @@ class App extends Component {
                     width: 500,
                     height: 500
                 }}>
+                    <FindStoreInputForm/>
                     <SideNav/>
                     <SearchBar/>
                     <ResultsTable/>
                     <StoreTable/>
                     <Map center={location} markers={markers}/>
-                    {/* <MapButton/> */}
+                    <MapButton/>
                     <Header/>
                     <FavoritesTable/>
                     <TextArea/>
