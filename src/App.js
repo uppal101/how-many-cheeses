@@ -4,13 +4,9 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import SignInPage from './components/Login/SignInPage'
 import Search from './components/SearchPage'
 import Store from './components/FindAStore'
+import Favorites from './components/FavoritesPage'
 import Map from './components/GoogleMap/GoogleMap'
 import Places from './components/PlacesComponent/Places'
-import SearchBar from './components/Common/SearchBar'
-import TextArea from './components/TextArea/TextArea'
-import Header from './components/Header'
-import FavoritesTable from './components/favoritesTable/Table'
-import StoreTable from './components/StoreTable/Table'
 
 class App extends Component {
     render() {
@@ -41,17 +37,10 @@ class App extends Component {
                   <Route path='/Sign-in' component={SignInPage}/>
                   <Route path='/Search' component={Search}/>
                   <Route path='/FindAStore' component={Store}/>
-                  {/* <Route path='/Favorites' component={Favorites}/> */}
-                     {/* <NavBar/> */}
+                  <Route path='/Favorites' component={Favorites}/>
                 </div>
                 <div>/
                      {/* <Map center={location} markers={markers}/> */}
-                     {/* <SearchButton/>
-                     <Header/>
-                     <FavoritesTable/>
-                     <TextArea/>
-                     {/* <Email/>
-                     <Password/> */}
                 </div>
               </div>
               </Router>
