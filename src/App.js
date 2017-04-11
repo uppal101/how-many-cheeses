@@ -11,7 +11,7 @@ import Header from './components/Header'
 import LoginTitle from './components/Login/LoginTitle'
 import SignIn from './components/Login/SignIn'
 import FavoritesTable from './components/favoritesTable/Table'
-import ResultsTable from './components/SearchTable/Table'
+import ResultsTable from './components/SearchTableResults/Table'
 import StoreTable from './components/StoreTable/Table'
 
 class App extends Component {

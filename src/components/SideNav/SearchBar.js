@@ -24,10 +24,12 @@ class SearchBar extends React.Component {
          onChange={(event) => this.props.setQuery(event.target.value)}
          />
          <Button onClick={(event) => {
+          // console.log('Inside of submit function');
           event.preventDefault();
           this.props.setCheeseResult(this.props.value)
          }}>Sumbit Cheese</Button>
       </form>
+
     );
   }
 }
