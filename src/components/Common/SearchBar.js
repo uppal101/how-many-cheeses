@@ -1,33 +1,36 @@
 import React from "react"
 import {connect} from 'react-redux'
-import {setQuery, setCheeseResult} from '../action'
+import {cheeseQuery, setCheeseResult} from '../action/cheeseName'
 import {bindActionCreators} from 'redux'
 import {Button} from 'react-bootstrap';
 
 const mapStateToProps = (state, ownProps) => {
  return {
-  value: state.query
+  value: state.cheeseQuery
  }
 }
 
 const mapDispatchToProps = (dispatch) => {
- return bindActionCreators({setQuery, setCheeseResult}, dispatch)//binds more tha
+ return bindActionCreators({cheeseQuery, setCheeseResult}, dispatch)
 }
 
 class SearchBar extends React.Component {
   render() {
+    console.log('This is props ' + this.props.value)
     return (
       <form>
         <input
          type="text"
-         placeholder="Search"
-         onChange={(event) => this.props.setQuery(event.target.value)}
+         placeholder="Search By Cheese"
+         onChange={(event) => this.props.cheeseQuery(event.target.value)}
          />
          <Button onClick={(event) => {
+          // console.log('Inside of submit function');
           event.preventDefault();
           this.props.setCheeseResult(this.props.value)
          }}>Sumbit Cheese</Button>
       </form>
+
     );
   }
 }

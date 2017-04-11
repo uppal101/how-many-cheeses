@@ -1,63 +1,55 @@
 import React, {Component} from 'react';
 import './App.css';
-import Map from './components/GoogleMap/GoogleMap'
-// import Places from './components/PlacesComponent/Places'
-import SideNav from './components/SideNav/SideNav'
-import NavBar from './components/Common/Navigation/NavBar'
+
+
 import MapButton from './components/Common/MapSearchStore'
-import SearchBar from './components/Common/SearchBar'
-import TextArea from './components/TextArea/TextArea'
-import Header from './components/Header'
-import LoginTitle from './components/Login/LoginTitle'
-import SignIn from './components/Login/SignIn'
-import FavoritesTable from './components/favoritesTable/Table'
-import ResultsTable from './components/SearchTableResults/Table'
-import StoreTable from './components/StoreTable/Table'
 import FindStoreInputForm from './components/FindStoreInputForm/FindStoreInputForm'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import SignInPage from './components/Login/SignInPage'
+import Search from './components/SearchPage'
+import Store from './components/FindAStore'
+import Favorites from './components/FavoritesPage'
+import Map from './components/GoogleMap/GoogleMap'
+import Places from './components/PlacesComponent/Places'
 
 class App extends Component {
     render() {
-        const location = {
-            lat: 37.7749,
-            lng: -122.4194
-        }
-        const markers = [
-            {
-                location: {
-                    lat: 37.7749,
-                    lng: -122.4194
-                }
-            }
-        ]
+        //  const location = {
+        //      lat: 37.7749,
+        //      lng: -122.4194
+        //  }
+        //  const markers = [
+        //      {
+        //          location: {
+        //              lat: 37.7749,
+        //              lng: -122.4194
+        //          }
+        //      }
+        //  ]
         return (
-            <div style={{
-                width: 400,
-                height: 400
-            }}>
+
+             <Router>
+              <div>
                 <div>
-                    <NavBar/>
+                  <ul>
+                    <li><Link to='/Sign-in'>Sign-in</Link></li>
+                    <li><Link to='/Search'>Search</Link></li>
+                    <li><Link to='/FindAStore'>Find A Store</Link></li>
+                    <li><Link to='/Favorites'>Favorites</Link></li>
+                  </ul>
+
+                  <Route path='/Sign-in' component={SignInPage}/>
+                  <Route path='/Search' component={Search}/>
+                  <Route path='/FindAStore' component={Store}/>
+                  <Route path='/Favorites' component={Favorites}/>
                 </div>
-                <div style={{
-                    width: 500,
-                    height: 500
-                }}>
-                    <FindStoreInputForm/>
-                    <SideNav/>
-                    <SearchBar/>
-                    <ResultsTable/>
-                    <StoreTable/>
-                    <Map center={location} markers={markers}/>
-                    <MapButton/>
-                    <Header/>
-                    <FavoritesTable/>
-                    <TextArea/>
-                    <LoginTitle/>
-                    <SignIn/>
-                    {/* <Email/> */}
-                    {/* <Password/> */}
+
+                <div>
+                     {/* <Map center={location} markers={markers}/> */}
                 </div>
-            </div>
-        );
+              </div>
+              </Router>
+        )
     }
 }
 
