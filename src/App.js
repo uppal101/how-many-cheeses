@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-// import Map from './components/GoogleMap/GoogleMap'
+import Map from './components/GoogleMap/GoogleMap'
 // import Places from './components/PlacesComponent/Places'
 import SideNav from './components/SideNav/SideNav'
 import NavBar from './components/Common/Navigation/NavBar'
@@ -16,18 +16,18 @@ import StoreTable from './components/StoreTable/Table'
 
 class App extends Component {
     render() {
-        // const location = {
-        //     lat: 37.7749,
-        //     lng: -122.4194
-        // }
-        // const markers = [
-        //     {
-        //         location: {
-        //             lat: 37.7749,
-        //             lng: -122.4194
-        //         }
-        //     }
-        // ]
+        const location = {
+            lat: 37.7749,
+            lng: -122.4194
+        }
+        const markers = [
+            {
+                location: {
+                    lat: 37.7749,
+                    lng: -122.4194
+                }
+            }
+        ]
         return (
             <div style={{
                 width: 400,
@@ -44,7 +44,7 @@ class App extends Component {
                     <SearchBar/>
                     <ResultsTable/>
                     <StoreTable/>
-                    {/* <Map center={location} markers={markers}/> */}
+                    <Map center={location} markers={markers}/>
                     <SearchButton/>
                     <Header/>
                     <FavoritesTable/>

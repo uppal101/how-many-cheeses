@@ -1,9 +1,10 @@
 import React, {Component} from "react"
+import {Button} from 'react-bootstrap';
 
 class SearchButton extends Component {
   render() {
     return (
-       <button type="submit">Search</button>
+       <Button type="submit">Search</Button>
     );
   }
 }
