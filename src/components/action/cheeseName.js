@@ -1,13 +1,13 @@
-export const setQuery = (text) => {
+export const cheeseQuery = (text) => {
  return {
-  type: 'SET_QUERY',
+  type: 'CHEESE_QUERY',
   text
  }
 }
 
 export const setCheeseResult = (cheeseName) => {
  return {
-  type: 'SET_RESULT',
+  type: 'CHEESE_RESULT',
   payload: fetchCheese(cheeseName)
  }
 }

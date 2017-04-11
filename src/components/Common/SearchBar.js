@@ -1,6 +1,6 @@
 import React from "react"
 import {connect} from 'react-redux'
-import {setQuery, setCheeseResult} from '../action'
+import {CheeseQuery, setCheeseResult} from '../action/cheeseName'
 import {bindActionCreators} from 'redux'
 import {Button} from 'react-bootstrap';
 
@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
- return bindActionCreators({setQuery, setCheeseResult}, dispatch)
+ return bindActionCreators({CheeseQuery, setCheeseResult}, dispatch)
 }
 
 class SearchBar extends React.Component {
@@ -20,8 +20,8 @@ class SearchBar extends React.Component {
       <form>
         <input
          type="text"
-         placeholder="Search"
-         onChange={(event) => this.props.setQuery(event.target.value)}
+         placeholder="Search By Cheese"
+         onChange={(event) => this.props.CheeseQuery(event.target.value)}
          />
          <Button onClick={(event) => {
           // console.log('Inside of submit function');

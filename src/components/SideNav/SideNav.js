@@ -1,6 +1,6 @@
 import React from "react"
 import {ButtonGroup, Button, DropdownButton} from 'react-bootstrap';
-import SearchBar from './SearchBar.js'
+import SearchBar from '../Common/SearchBar.js'
 
 const SideNav = () => {
         return (
@@ -18,11 +18,11 @@ const SideNav = () => {
               <DropdownButton title="Search By Substitute" id="bg-vertical-dropdown-1">
                 <SearchBar/>
               </DropdownButton>
-              <Button>Find in Stores</Button>
-              <DropdownButton title="Give Me That Random Cheese!" id="bg-vertical-dropdown-1">
+              <Button disabled>Find in Stores</Button>
+              <DropdownButton title="Give Me That Random Cheese!" id="bg-vertical-dropdown-1" disabled>
                 <SearchBar/>
               </DropdownButton>
-              <Button>See My Favorites</Button>
+              <Button disabled>See My Favorites</Button>
             </ButtonGroup>
         )
 
