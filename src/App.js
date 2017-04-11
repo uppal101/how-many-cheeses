@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import { BrowerRouter as Router } from 'react-router-dom'
 // import Map from './components/GoogleMap/GoogleMap'
 // import Places from './components/PlacesComponent/Places'
 import SideNav from './components/SideNav/SideNav'
@@ -29,32 +30,37 @@ class App extends Component {
         //     }
         // ]
         return (
-            <div style={{
-                width: 400,
-                height: 400
-            }}>
+            <Router>
                 <div>
-                    <NavBar/>
+                  <ul>
+                    <li><link to= '/Sign-in'>Sign-in</link></li>
+                    <li><link to= '/Search'>Search</link></li>
+                    <li><link to= '/FindAStore'>Find A Store</link></li>
+                    <li><link to= '/Favorites'>Favorites</link></li>
+                  </ul>
+
+                  <Route path='/Sign-in' component={SignIn}/>
+                  <Route path='/Search' component={Search}/>
+                  <Route path='/FindAStore' component={Store}/>
+                  <Route path='/Favorites' component={Store}/>
+                    {/* <NavBar/>
                 </div>
-                <div style={{
-                    width: 500,
-                    height: 500
-                }}>
+                <div>
                     <SideNav/>
                     <SearchBar/>
                     <ResultsTable/>
                     <StoreTable/>
                     {/* <Map center={location} markers={markers}/> */}
-                    <SearchButton/>
+                    {/* <SearchButton/>
                     <Header/>
                     <FavoritesTable/>
                     <TextArea/>
                     <LoginTitle/>
-                    <SignIn/>
+                    <SignIn/> */}
                     {/* <Email/> */}
                     {/* <Password/> */}
                 </div>
-            </div>
+            </Router>
         );
     }
 }
