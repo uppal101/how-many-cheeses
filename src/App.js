@@ -4,7 +4,7 @@ import Map from './components/GoogleMap/GoogleMap'
 // import Places from './components/PlacesComponent/Places'
 import SideNav from './components/SideNav/SideNav'
 import NavBar from './components/Common/Navigation/NavBar'
-import SearchButton from './components/Common/Button'
+import MapButton from './components/Common/Button'
 import SearchBar from './components/Common/SearchBar'
 import TextArea from './components/TextArea/TextArea'
 import Header from './components/Header'
@@ -45,7 +45,7 @@ class App extends Component {
                     <ResultsTable/>
                     <StoreTable/>
                     <Map center={location} markers={markers}/>
-                    <SearchButton/>
+                    {/* <MapButton/> */}
                     <Header/>
                     <FavoritesTable/>
                     <TextArea/>

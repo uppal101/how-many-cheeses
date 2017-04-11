@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
- return bindActionCreators({setQuery, setCheeseResult}, dispatch)
+ return bindActionCreators({setQuery, setCheeseResult}, dispatch)//binds more tha
 }
 
 class SearchBar extends React.Component {
