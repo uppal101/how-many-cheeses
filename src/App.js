@@ -39,7 +39,7 @@ class App extends Component {
                   <Route path='/FindAStore' component={Store}/>
                   <Route path='/Favorites' component={Favorites}/>
                 </div>
-                <div>/
+                <div>
                      {/* <Map center={location} markers={markers}/> */}
                 </div>
               </div>
