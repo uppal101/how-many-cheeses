@@ -32,5 +32,4 @@ class Tbody extends Component {
     }
 }
 
-
 export default connect(mapStateToProps, mapDispatchToProps)(Tbody)

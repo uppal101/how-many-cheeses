@@ -1,27 +1,29 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
-import Map from './components/GoogleMap/GoogleMap'
-import Places from './components/PlacesComponent/Places'
-// import SideNavSubCategories from './components/SideNav/SideNavSubCategories'
-import SideNav from './components/SideNav/SideNav'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import MapButton from './components/Common/MapSearchStore'
+import FindStoreInputForm from './components/FindStoreInputForm/FindStoreInputForm'
+import SignInPage from './components/Login/SignInPage'
+import Search from './components/SearchPage'
+import Store from './components/FindAStore'
+import Favorites from './components/FavoritesPage'
+import Navbar from './components/Common/Navigation/NavBar'
+
 
 class App extends Component {
-  render() {
-   const location = {
-    lat: 0,
-    lng: 0
-   }
-    return (
-      <div >
-        <div style={{width:500, height:500, background:'red'}}>
-          <Map center={location} />
-          <SideNav/>
-        </div>
-
-
-      </div>
-    );
-  }
+    render() {
+        return (
+             <Router>
+                <div>
+                  <Navbar/>
+                  <Route path='/Sign-in' component={SignInPage}/>
+                  <Route path='/Search' component={Search}/>
+                  <Route path='/FindAStore' component={Store}/>
+                  <Route path='/Favorites' component={Favorites}/>
+                </div>
+              </Router>
+        )
+    }
 }
 
 export default App;
