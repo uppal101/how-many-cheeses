@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {tbody, tr, td } from 'react-bootstrap';
+import {connect} from 'react-redux';
+import {firmnessQuery, setCheeseResult} from '../action/firmness';
+import {bindActionCreators} from 'redux';
 import Checkbox from './Checkbox';
 
 const mapStateToProps = (state, ownProps) => {
  return {
-  value: state.firmness.result
+  value: state.result.results
  }
 }
 

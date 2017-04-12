@@ -3,5 +3,6 @@ export default {
   animal: {query: '', results : []},
   firmness: {query: '', results : []},
   substitute: {query: '', results : []},
-  cheeses: {results : []}
+  cheeses: {results : []},
+  result: {results : []}
 }
