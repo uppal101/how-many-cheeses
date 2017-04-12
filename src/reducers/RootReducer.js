@@ -4,6 +4,7 @@ import query from './ReducerNavSearchQuery'
 import CheeseReducer from './CheeseReducer'
 import FirmnessReducer from './FirmnessReducer'
 import AnimalReducer from './AnimalReducer'
+import SubstituteReducer from './SubstituteReducer'
 import mapQuery from './MapReducer'
 
 const rootReducer= combineReducers({
@@ -11,7 +12,8 @@ const rootReducer= combineReducers({
  mapQuery,
  cheese: CheeseReducer,
  firmness: FirmnessReducer,
- animal: AnimalReducer
+ animal: AnimalReducer,
+ substitute: SubstituteReducer
 
 })
 

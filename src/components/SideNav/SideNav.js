@@ -3,8 +3,7 @@ import {ButtonGroup, Button, DropdownButton} from 'react-bootstrap';
 import SearchCheeseBar from './SearchCheeseBar';
 import SearchFirmnessBar from './SearchFirmnessBar';
 import SearchAnimalBar from './SearchAnimalBar';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
+import SearchSubstituteBar from './SearchSubstituteBar';
 
 
 const SideNav = (props) => {
@@ -22,7 +21,7 @@ const SideNav = (props) => {
                 <SearchCheeseBar/>
               </DropdownButton>
               <DropdownButton title="Search By Substitute" id="bg-vertical-dropdown-1">
-                {/* <SearchBar/> */}
+                <SearchSubstituteBar/>
               </DropdownButton>
               <Button href='/FindAStore'>Find in Stores</Button>
               <DropdownButton title="Give Me That Random Cheese!" id="bg-vertical-dropdown-1" disabled>
