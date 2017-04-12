@@ -4,11 +4,6 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import findStore from '../action/findStore'
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//    findStore: (zip, dist) => findStore(zip, dist)
-//   }
-// }
 
 const mapDispatchToProps = (dispatch) => {
  return bindActionCreators({findStore}, dispatch)
