@@ -2,15 +2,17 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 const API_KEY = 'AIzaSyA6_Q41cfo5GrTNCxzbKEIBg2lE7Gn-acw';
 import {Gmaps, Marker, InfoWindow, Circle} from 'react-gmaps';
+import mapQuery from '../../reducers/MapReducer'
 
 const coords = {
-  lat: 51.5258541,
-  lng: -0.08040660000006028
+ lat: 37.7749,
+ lng: -122.4194
 };
 
 class Map extends Component{
     constructor(props){
         super(props);
+        // console.log('______', this.props);
         this.generateMarkers = this.generateMarkers.bind(this);
     }
 
@@ -33,14 +35,16 @@ class Map extends Component{
     console.log('onClick', e);
   }
  generateMarkers() {
-    console.log(this.props);
-    const markers = this.props.markers.map((venue, i) => {
-      // return <Marker key={i} {...marker}/>
+    console.log('-------------', this.props);
+    const markers = this.props.data.map((marker, i) => {
+
+     console.log('insde generateMarkers', i);
+      return <Marker key={i} {...marker}/>
     })
 }
 
   render() {
-    console.log(this.props.data);
+    console.log('state >>>>>>>>>>', this.props);
       return (
           <Gmaps
             width={'100%'}
@@ -52,35 +56,16 @@ class Map extends Component{
             params={{v: '3.exp', key: API_KEY}}
             onMapCreated={this.onMapCreated}>
             {/* {this.generateMarkers()} */}
-            {/* <Marker
-              lat={coords.lat}
-              lng={coords.lng}
-              draggable={true}
-              onDragEnd={this.onDragEnd} />
-
-            <Marker
-              lat={store1.latitude}
-              lng={store1.longitude}
-              draggable={true}
-              onDragEnd={this.onDragEnd} />
-
-              <Marker
-                lat={store2.latitude}
-                lng={store2.longitude}
-                draggable={true}
-                onDragEnd={this.onDragEnd} />
-
-                <Marker
-                  lat={store3.latitude}
-                  lng={store3.longitude}
-                  draggable={true}
-                  onDragEnd={this.onDragEnd} /> */}
-
           </Gmaps>
       )
   }
 }
-// function mapStateToProps(state){
-//     return {data: state.data}
-// }
-export default Map;
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    data: mapQuery
+  }
+}
+
+export default connect(mapStateToProps)(Map)
+// export default Map;

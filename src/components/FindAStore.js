@@ -6,23 +6,6 @@ import FindStoreInputForm from './FindStoreInputForm/FindStoreInputForm'
 
 class Store extends Component {
     render() {
-
-
-         {/* <div>
-          const location = {
-              lat: 37.7749,
-              lng: -122.4194
-          }
-          const markers = [
-              {
-                  location: {
-                      lat: 37.7749,
-                      lng: -122.4194
-                  }
-              }
-          ]
-          return (
-         </div> */}
          return (
            <div>
             <NavBar/>
@@ -30,7 +13,6 @@ class Store extends Component {
             <FindStoreInputForm/>
             <Map/>
            </div>
-
          )
 
     }
