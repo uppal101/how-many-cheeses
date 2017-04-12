@@ -2,6 +2,7 @@ import React from "react";
 import {ButtonGroup, Button, DropdownButton} from 'react-bootstrap';
 import SearchCheeseBar from './SearchCheeseBar';
 import SearchFirmnessBar from './SearchFirmnessBar';
+import SearchAnimalBar from './SearchAnimalBar';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 
@@ -15,7 +16,7 @@ const SideNav = (props) => {
                 <SearchFirmnessBar/>
               </DropdownButton>
               <DropdownButton title="Search By Animal" id="bg-vertical-dropdown-1">
-                {/* <SearchBar/> */}
+                <SearchAnimalBar/>
               </DropdownButton>
               <DropdownButton title="Search By Cheese Name" id="bg-vertical-dropdown-1" >
                 <SearchCheeseBar/>
