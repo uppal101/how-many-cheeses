@@ -6,7 +6,7 @@ import {Button} from 'react-bootstrap';
 
 const mapStateToProps = (state, ownProps) => {
  return {
-  value: state.cheeseQuery
+  value: state.cheese.query
  }
 }
 
@@ -22,6 +22,7 @@ class SearchBar extends React.Component {
         <input
          type="text"
          placeholder="Search By Cheese"
+         value={this.props.value}
          onChange={(event) => this.props.cheeseQuery(event.target.value)}
          />
          <Button onClick={(event) => {

@@ -5,7 +5,7 @@ import CheeseReducer from './CheeseReducer'
 
 const rootReducer= combineReducers({
  query,
- CheeseReducer
+ cheese: CheeseReducer
 })
 
 export default rootReducer;
