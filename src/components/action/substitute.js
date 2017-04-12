@@ -1,19 +1,19 @@
-export const cheeseQuery = (text) => {
+export const substituteQuery = (text) => {
  return {
-  type: 'CHEESE_QUERY',
+  type: 'SUBSTITUTE_QUERY',
   text
  }
 }
 
 export const setCheeseResult = (cheeseName) => {
  return {
-  type: 'CHEESE_RESULT',
+  type: 'SUBSTITUTE_RESULT',
   payload: fetchCheese(cheeseName)
  }
 }
 
 function fetchCheese(cheeseName) {
- return fetch(`http://cheeswhiz.herokuapp.com/api/cheese/specific/${cheeseName}`)
+ return fetch(`http://cheeswhiz.herokuapp.com/api/cheese/substitute/${cheeseName}`)
  .then(response => response.json())
  .then(result => result)
  .catch((err) => console.log('Houston we has a prolem!'))

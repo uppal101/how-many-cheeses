@@ -1,17 +1,17 @@
 import React from "react"
 import {connect} from 'react-redux'
-import {cheeseQuery, setCheeseResult} from '../action/cheeseName'
+import {firmnessQuery, setCheeseResult} from '../action/firmness'
 import {bindActionCreators} from 'redux'
 import {Button} from 'react-bootstrap';
 
 const mapStateToProps = (state, ownProps) => {
  return {
-  value: state.cheeseQuery
+  value: state.firmness.query
  }
 }
 
 const mapDispatchToProps = (dispatch) => {
- return bindActionCreators({cheeseQuery, setCheeseResult}, dispatch)
+ return bindActionCreators({firmnessQuery, setCheeseResult}, dispatch)
 }
 
 class SearchBar extends React.Component {
@@ -22,7 +22,8 @@ class SearchBar extends React.Component {
         <input
          type="text"
          placeholder="Search By Cheese"
-         onChange={(event) => this.props.cheeseQuery(event.target.value)}
+         value={this.props.value}
+         onChange={(event) => this.props.firmnessQuery(event.target.value)}
          />
          <Button onClick={(event) => {
           // console.log('Inside of submit function');

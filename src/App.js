@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import './App.css';
-
-
 import MapButton from './components/Common/MapSearchStore'
 import FindStoreInputForm from './components/FindStoreInputForm/FindStoreInputForm'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import SignInPage from './components/Login/SignInPage'
 import Search from './components/SearchPage'
 import Store from './components/FindAStore'
 import Favorites from './components/FavoritesPage'
 import Map from './components/GoogleMap/GoogleMap'
 import Places from './components/PlacesComponent/Places'
+import Navbar from './components/Common/Navigation/NavBar'
 
 class App extends Component {
     render() {
@@ -27,23 +26,15 @@ class App extends Component {
         //      }
         //  ]
         return (
-
              <Router>
               <div>
                 <div>
-                  <ul>
-                    <li><Link to='/Sign-in'>Sign-in</Link></li>
-                    <li><Link to='/Search'>Search</Link></li>
-                    <li><Link to='/FindAStore'>Find A Store</Link></li>
-                    <li><Link to='/Favorites'>Favorites</Link></li>
-                  </ul>
-
+                  <Navbar/>
                   <Route path='/Sign-in' component={SignInPage}/>
                   <Route path='/Search' component={Search}/>
                   <Route path='/FindAStore' component={Store}/>
                   <Route path='/Favorites' component={Favorites}/>
                 </div>
-
                 <div>
                      {/* <Map center={location} markers={markers}/> */}
                 </div>
