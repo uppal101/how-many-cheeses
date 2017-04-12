@@ -1,6 +1,7 @@
 export default {
-  cheese: {query: '', result : {}},
-  animal: {query: '', result : []},
-  firmness: {query: '', result : []},
-  substitute: {query: '', result : []}
+  cheese: {query: '', results : []},
+  animal: {query: '', results : []},
+  firmness: {query: '', results : []},
+  substitute: {query: '', results : []},
+  cheeses: {results : []}
 }

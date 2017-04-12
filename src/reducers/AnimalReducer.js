@@ -1,17 +1,17 @@
 import initialState from './InitialState'
 
 
-const CheeseReducer = (state = initialState.cheese, action) => {
+const AnimalReducer = (state = initialState.animal, action) => {
   // console.log(state)
   console.log(action);
  switch (action.type) {
-  case  'CHEESE_QUERY':
+  case  'ANIMAL_QUERY':
    return {...state, query: action.text}
-  case 'CHEESE_RESULT_FULFILLED':
+  case 'ANIMAL_RESULT_FULFILLED':
     return {query: "", results: action.payload}
   default:
    return state
  }
 }
 
-export default CheeseReducer;
+export default AnimalReducer;
