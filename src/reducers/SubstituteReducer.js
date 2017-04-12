@@ -1,6 +1,6 @@
 import initialState from './InitialState'
 
-const SubstituteReducer = (state = initialState.cheese, action) => {
+const SubstituteReducer = (state = initialState.substitute, action) => {
   // console.log(state)
   console.log(action);
  switch (action.type) {

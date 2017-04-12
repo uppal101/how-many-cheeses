@@ -1,7 +1,7 @@
 import initialState from './InitialState'
 
 
-const AnimalReducer = (state = initialState.cheese, action) => {
+const AnimalReducer = (state = initialState.animal, action) => {
   // console.log(state)
   console.log(action);
  switch (action.type) {

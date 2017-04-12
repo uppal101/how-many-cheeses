@@ -1,7 +1,7 @@
 import initialState from './InitialState'
 
 
-const FirmnessReducer = (state = initialState.cheese, action) => {
+const FirmnessReducer = (state = initialState.firmness, action) => {
   // console.log(state)
   console.log(action);
  switch (action.type) {
