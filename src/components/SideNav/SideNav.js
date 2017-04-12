@@ -1,19 +1,9 @@
-import React from "react"
+import React from "react";
 import {ButtonGroup, Button, DropdownButton} from 'react-bootstrap';
-import SearchCheeseBar from './SearchCheeseBar'
-import {cheeseQuery, setCheeseResult} from '../action/cheeseName'
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
-
-const mapStateToProps = (state, ownProps) => {
- return {
-  queries: state
- }
-}
-
-const mapDispatchToProps = (dispatch) => {
- return bindActionCreators({cheeseQuery, setCheeseResult}, dispatch)
-}
+import SearchCheeseBar from './SearchCheeseBar';
+import SearchFirmnessBar from './SearchFirmnessBar';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 
 
 const SideNav = (props) => {
@@ -22,7 +12,7 @@ const SideNav = (props) => {
             <ButtonGroup vertical>
               <Button>See All Cheeses</Button>
               <DropdownButton title="Search By Firmness" id="bg-vertical-dropdown-1">
-                {/* <SearchBar/> */}
+                <SearchFirmnessBar/>
               </DropdownButton>
               <DropdownButton title="Search By Animal" id="bg-vertical-dropdown-1">
                 {/* <SearchBar/> */}
@@ -43,4 +33,4 @@ const SideNav = (props) => {
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SideNav)
+export default SideNav
