@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
+
+
+import MapButton from './components/Common/MapSearchStore'
+import FindStoreInputForm from './components/FindStoreInputForm/FindStoreInputForm'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import SignInPage from './components/Login/SignInPage'
 import Search from './components/SearchPage'
