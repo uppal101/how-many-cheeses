@@ -17,7 +17,7 @@
 import axios from 'axios'
 
  const findStore = (zip, dist) => {
-  let data = axios.get(`http://cheeswhiz.herokuapp.com/api/findcheese/${zip}/${dist}`)
+  let data = axios.get(`https://cheeswhiz.herokuapp.com/api/findcheese/${zip}/${dist}`)
   .then((result) => {
     return result.data;
   });

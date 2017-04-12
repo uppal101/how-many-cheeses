@@ -6,7 +6,7 @@ export const setCheeseResult = () => {
 }
 
 function fetchCheese() {
- return fetch('http://cheeswhiz.herokuapp.com/api/cheese')
+ return fetch('https://cheeswhiz.herokuapp.com/api/cheese')
  .then(response => response.json())
  .then(result => result)
  .catch((err) => console.log('Houston we has a prolem!'))
