@@ -2,6 +2,16 @@ import React, {Component} from 'react';
 import {tbody, tr, td } from 'react-bootstrap';
 import Checkbox from './Checkbox';
 
+const mapStateToProps = (state, ownProps) => {
+ return {
+  value: state.firmness.result
+ }
+}
+
+const mapDispatchToProps = (dispatch) => {
+ return bindActionCreators({firmnessQuery, setCheeseResult}, dispatch)
+}
+
 class Tbody extends Component {
     render() {
         return (
@@ -19,4 +29,5 @@ class Tbody extends Component {
     }
 }
 
-export default Tbody
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tbody)
