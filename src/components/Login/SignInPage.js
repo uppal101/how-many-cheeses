@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
-import SignIn from './SignIn';
-import LoginTitle from './LoginTitle';
+import React, { Component } from "react";
+import SignIn from "./SignIn";
+import LoginTitle from "./LoginTitle";
 
 class SignInPage extends Component {
-    render() {
-        return (
-          <div>
-            <LoginTitle/>
-            <SignIn/>
-          </div>  
-        )
-    }
+  render() {
+    return (
+      <div>
+        <LoginTitle/>
+        <SignIn/>
+      </div>
+    );
+  }
 }
 
-export default SignInPage
+export default SignInPage;
