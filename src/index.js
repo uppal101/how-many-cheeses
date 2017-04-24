@@ -1,20 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import { Provider } from 'react-redux';
-import App from './App';
-import  rootReducer from './reducers/RootReducer';
-import { createStore, applyMiddleware, compose } from 'redux';
-import promiseMiddleware from 'redux-promise-middleware';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import promiseMiddleware from "redux-promise-middleware";
+
+import App from "./App";
+import rootReducer from "./reducers/RootReducer";
+import "./index.css";
 
 
-
-// const composeStoreWithMiddleware = applyMiddleware( promiseMiddleware())(createStore);
-// const store = composeStoreWithMiddleware(rootReducer);
-// window.__store__ = store; // TODO: remove this, just for development debugging
-
-// const composeStoreWithMiddleware = applyMiddleware( promiseMiddleware())(createStore);
-// const store = composeStoreWithMiddleware(rootReducer);
+// take out any code that you're not using.
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancers(
@@ -23,12 +18,12 @@ const store = createStore(rootReducer, composeEnhancers(
 
 
 ReactDOM.render(
- <Provider store={store}>
-  <App />
- </Provider>,
-  document.getElementById('root')
+  <Provider store={store}>
+    <App/>
+  </Provider>,
+  document.getElementById("root")
 );
 
-if(module.hot) {
- module.hot.accept()
+if (module.hot) {
+  module.hot.accept();
 }

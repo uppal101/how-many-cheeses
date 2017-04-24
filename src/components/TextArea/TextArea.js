@@ -1,6 +1,6 @@
-import React from "react"
-import TextBoxTitle from "./TextBoxTitle"
-import TextBox from "./TextBox"
+import React from "react";
+import TextBoxTitle from "./TextBoxTitle";
+import TextBox from "./TextBox";
 
 class TextArea extends React.Component {
   render() {

@@ -1,17 +1,23 @@
-import React, {Component} from 'react';
-import {Table} from 'react-bootstrap';
-import Thead from './Thead'
-import Tbody from './Tbody'
+import React, { Component } from "react";
+import { Table } from "react-bootstrap";
+import Tbody from "./Tbody";
 
 class FavoritesTable extends Component {
-    render() {
-        return (
-            <Table responsive>
-              <Thead/>
-              <Tbody/>
-            </Table>
-        )
-    }
+  render() {
+    return (
+      <Table responsive>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Firmness</th>
+            <th>Animal</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <Tbody/>
+      </Table>
+    );
+  }
 }
 
-export default FavoritesTable
+export default FavoritesTable;

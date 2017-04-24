@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 class TextArea extends React.Component {
   render() {
@@ -9,4 +9,4 @@ class TextArea extends React.Component {
   }
 }
 
-export default TextArea
+export default TextArea;

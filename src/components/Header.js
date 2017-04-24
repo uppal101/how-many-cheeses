@@ -1,7 +1,5 @@
-import React from "react"
+import React from "react";
 
-const Header = () => {
-  return (<h2>FAVORITES</h2>)
-}
+const Header = () => (<h2>FAVORITES</h2>);
 
 export default Header;

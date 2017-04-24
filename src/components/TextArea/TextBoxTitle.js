@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, { Component } from "react";
 
 class TextBoxTitle extends Component {
   render() {
@@ -10,4 +10,4 @@ class TextBoxTitle extends Component {
   }
 }
 
-export default TextBoxTitle
+export default TextBoxTitle;

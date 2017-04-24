@@ -16,16 +16,16 @@
 
 import axios from 'axios'
 
- const findStore = (zip, dist) => {
-  let data = axios.get(`https://cheeswhiz.herokuapp.com/api/findcheese/${zip}/${dist}`)
-  .then((result) => {
-    return result.data;
-  });
+const findStore = ( zip, dist ) => {
+    let data = axios.get( `https://cheeswhiz.herokuapp.com/api/findcheese/${zip}/${dist}` )
+        .then( ( result ) => {
+            return result.data;
+        } );
 
-  return {
-    type: 'FIND_STORE',
-    payload: data
-  };
+    return {
+        type: 'FIND_STORE',
+        payload: data
+    };
 }
 
 export default findStore;
